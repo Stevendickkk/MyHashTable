@@ -26,17 +26,17 @@ public class Main {
                 long startTime = System.nanoTime();
 
                 for (int j = 0; j < operationsCount; j++) {
-                    int chance = random.nextInt(100); // число от 0 до 99
+                    int chance = random.nextInt(100);
                     int randomKey = random.nextInt(100_000_000);
 
                     if (chance < 40) {
-                        // 40% процентов — put
+
                         hashTable.put(randomKey, randomKey);
                     } else if (chance < 80) {
-                        // 40% процентов — get (от 40 до 79)
+
                         hashTable.get(randomKey);
                     } else {
-                        // 20% процентов — remove (от 80 до 99)
+
                         hashTable.remove(randomKey);
                     }
                 }
